@@ -3,3 +3,6 @@ function error(status, msg) {
     err.status = status;
     return err;
 }
+
+
+module.exports = error;
