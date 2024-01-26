@@ -16,26 +16,19 @@ app.use('/quizes', quizesRoutes);
 
 // test
 app.get('/', (req, res) => {
-  res.send('Hello world from hamepage ')
+  res.send('Hello there! This my quiz page from homepage ')
 })
 
 
-
-// app.set('view engine', 'ejs');
-// app.get('/',(request, response) => {
-//   response.render('index',{ message: "Hello world"})
-// })
-
-// const quizesRoutes  = require("./routes/quizes");
-// const posts = require("./routes/posts");
-// const comments = require("./routes/comments")
-// const error = require("./utilities/error");
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
+app.get('/quizQuery',(req, res) => {
+  res.render('quiz', {data : {quizQuery: req.params.quizQuery}});
+});
 
 
-// app.get('/quiz/:id', (req, res) => {
-//   const quizId = req.params.id;
-//   res.render('quiz', { quizId });
-// });
+
+
  
 
 app.listen( port, () => {
