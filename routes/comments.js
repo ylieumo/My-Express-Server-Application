@@ -12,7 +12,7 @@ router
     res.json(comments);
   });
 
-  .post((req, res) => {
+router.post("/comments", (req, res) => {
     const { quizId, postId, body } = req.body;
   
     if (!quizId || !postId || !body) {

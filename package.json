@@ -2,10 +2,10 @@
   "name": "sba-318-express-server-application",
   "version": "1.0.0",
   "description": "Building an express server application",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "script": "start"
+    "start": "nodemon app.js"
   },
   "author": "Yolande",
   "license": "ISC",
